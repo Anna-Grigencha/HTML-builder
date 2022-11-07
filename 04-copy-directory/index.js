@@ -7,10 +7,10 @@ const path = require('path');
 });
 let files = await fs.readdir(path.join(__dirname, 'files'));
 for (let file of files) {
-const DirFilePath = path.join(__dirname, 'files');
-const src = path.join(DirFilePath, file);
-const DirFileCopyPath = path.join(__dirname, 'files-copy');
-const dest = path.join(DirFileCopyPath, file);
+const dirFilePath = path.join(__dirname, 'files');
+const src = path.join(dirFilePath, file);
+const dirFileCopyPath = path.join(__dirname, 'files-copy');
+const dest = path.join(dirFileCopyPath, file);
 await fs.copyFile(src, dest);
 }
     }
