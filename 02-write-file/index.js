@@ -1,8 +1,8 @@
 const path = require('path');
 const fs = require('fs');
-const output = fs.createWriteStream(path.join(__dirname, 'text.txt'), 'utf-8');//создание потока записи в текстовый файл
 const { stdout } = process; 
 const { stdin } = process;
+const output = fs.createWriteStream(path.join(__dirname, 'text.txt'), 'utf-8');//создание потока записи в текстовый файл
 stdout.write('Введите имя участника:\n');//Выводит строку в консоль
 stdin.on('data', chunk => 
 {
