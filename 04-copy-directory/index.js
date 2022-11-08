@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 (async () => {
     try {
-        await fs.rm(path.join(__dirname, 'files-copy'), { recursive: true }, err => { // удаляем папку files-copy
+        await fs.rm(path.join(__dirname, 'files-copy'), { recursive: true, force: true }, err => { // удаляем папку files-copy
             if (err) throw err;
     });
         await fs.mkdir(path.join(__dirname, 'files-copy'), { recursive: true }, err => { // создаем папку files-copy
